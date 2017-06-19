@@ -5,16 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Moment Simulate App</title>
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="./less/main.css">
+	<link rel="stylesheet" href="./public/less/main.css">
 </head>
-<body>
+<body ng-app="Moment">
 	<div class="viewport">
 		<!-- side navigation -->
-		<div class="navs">
+		<div ng-class="{navs: true, collapse: collapsed}">
 			<dl>
 				<dt class="login">
 					<div class="avatar">
-						<img src="./images/avatar.png" alt="">
+						<img src="./public/images/avatar.png" alt="">
 					</div>
 					<span>Login</span>
 				</dt>
@@ -56,104 +56,52 @@
 		</div>
 		<div class="container">
 			<!-- Head -->
-			<div class="header">
-				<a href="javascript:;" class="menu icon-menu"></a>
+			<div ng-class="{header: true, collapse: collapsed}">
+				<a href="javascript:;" class="menu icon-menu" ng-click="toggle()"></a>
 				<h2>Today</h2>
 				<a href="javascript:;" class="search icon-search"></a>
 			</div>
 			<!-- Body -->
-			<div class="body">
-				<div class="item">
-					<!-- Date -->
-					<div class="mark">13Aug</div>
-					<ul class="posts large">
-						<!-- article -->
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p class="only">那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清中钻洞是为了洗清那里有个很窄的洞，钻进去曾是莲花生大师修行的地方</p>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源</h3>
-								<div class="brief">
-									
-									<div class="gallery">
-										<img src="./uploads/post_2.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-					</ul>
-				</div>
+			<div ng-class="{body: true, collapse: collapsed}">
+				<!-- occupied view -->
 			</div>
 		</div>
 	</div>
-	<script src="./libs/toggle.js"></script>
+	<!-- <script src="./libs/toggle.js"></script> -->
+	<script src="./node_modules/angular/angular.js"></script>
+	<script src="./node_modules/angular-route/angular-route.js"></script>
+	<script src="./node_modules/angular-animate/angular-animate.js"></script>
+
+	<!-- js entrance file -->
+	<script src="./scripts/app.js"></script>
+	<script src="./scripts/controllers.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
