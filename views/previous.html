@@ -22,7 +22,10 @@
 
 					<!-- 10003 -->
 					<div class="gallery" ng-if="post.display_style == 10003">
-						<img ng-src="{{post.thumbs[0].small.url}}" alt="">
+						<div class="img-box" ng-repeat="thumb in post.thumbs">
+							<img ng-src="{{thumb.small.url}}" alt="">
+						</div>
+						
 					</div>
 				</div>							
 			</div>
@@ -31,3 +34,15 @@
 		
 	</ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+

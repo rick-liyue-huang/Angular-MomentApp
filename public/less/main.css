@@ -497,6 +497,10 @@ img {
 .collapse {
   transform: translate(12.8125rem);
 }
+.loading {
+  width: 2rem;
+  margin: 1rem auto 0;
+}
 .navs {
   width: 12.8125rem;
   height: 100%;
@@ -569,7 +573,7 @@ img {
   color: #1a1a1a;
 }
 .navs dd.active span {
-  color: #23a392;
+  color: #ff7858;
 }
 .navs .extra {
   width: 100%;
@@ -611,8 +615,8 @@ img {
   height: 2.75rem;
   max-width: 640px;
   padding-top: 0.8125rem;
-  border-bottom: 0.125rem solid #05ab94;
-  background-color: #21bba6;
+  border-bottom: 0.125rem solid #ff7858;
+  background-color: #ff562b;
   color: #FFF;
   position: fixed;
   top: 0;
@@ -843,7 +847,7 @@ img {
 .body .category li h5 {
   margin: 0.75rem 0;
   font-size: 0.875rem;
-  color: #0f9c89;
+  color: #ff7858;
 }
 .body .category li p {
   font-size: 0.6875rem;

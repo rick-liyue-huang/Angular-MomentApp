@@ -1,6 +1,6 @@
 
 
-	var App = angular.module('Moment', ['ngRoute', 'Controllers']);
+	var App = angular.module('Moment', ['ngRoute', 'Controllers', 'Directives']);
 
 	App.config(['$routeProvider',function($routeProvider) {
 		
@@ -9,9 +9,21 @@
 				templateUrl: "./views/today.html",
 				controller: 'TodayController'
 			})
-			.when('/older', {
-				templateUrl: './views/older.html',
-				controller: 'OldController'
+			.when('/previous', {
+				templateUrl: './views/previous.html',
+				controller: 'PreviousController'
+			})
+			.when('/authors', {
+				templateUrl: './views/authors.html',
+				controller: 'AuthorsController'
+			})
+			.when('/category', {
+				templateUrl: './views/category.html',
+				controller: 'CategoryController'
+			})
+			.when('/settings', {
+				templateUrl: './views/settings.html',
+				controller: 'SettingController'
 			})
 			.otherwise({
 				rediectTo: '/today'
