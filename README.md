@@ -15,4 +15,4 @@ This is a realtime blog SPA project, I get the data from 'douban' 'moment' serve
 
 ### Notice
 
-In order to get data from 'api/' folder, I put the whole project 'Angular-MomentApp' folder in the 'Applications/MAMP/htdocs/', and open in address of 'localhost/Angular-MomentApp/#/today'.
+In order to get data from 'api/' folder, I put the whole project 'Angular-MomentApp' folder in the 'Applications/MAMP/htdocs/', and open in address of 'localhost/Angular-MomentApp/#/today'. By the way, We also can add the plugin of "no referer image" to explore the pictures in chrome browsers.
